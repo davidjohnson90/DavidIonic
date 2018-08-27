@@ -7,11 +7,21 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
+import {OrdersPage} from "../pages/orders/orders";
+import {RatesPage} from "../pages/rates/rates";
+import {TabsPage} from "../pages/tabs/tabs";
+import {TrackPage} from "../pages/track/track";
+import {MarketPricePage} from "../pages/market-price/market-price";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    OrdersPage,
+    RatesPage,
+    TabsPage,
+    TrackPage,
+    MarketPricePage
   ],
   imports: [
     BrowserModule,
@@ -20,7 +30,12 @@ import { AuthProvider } from '../providers/auth/auth';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    OrdersPage,
+    RatesPage,
+    TabsPage,
+    TrackPage,
+    MarketPricePage
   ],
   providers: [
     StatusBar,

@@ -6,6 +6,7 @@ import firebase from 'firebase';
 import { firebaseConfig } from './credentials';
 import { HomePage } from '../pages/home/home';
 import { Unsubscribe } from '@firebase/util';
+import {TabsPage} from "../pages/tabs/tabs";
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +23,7 @@ export class MyApp {
 
     const unsubscribe: Unsubscribe = firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        this.rootPage = HomePage;
+        this.rootPage = TabsPage;
         unsubscribe();
       } else {
         this.rootPage = 'LoginPage';
